@@ -1,0 +1,6 @@
+.card-poster{
+    height: 100px;
+    border-radius: 5px;
+    object-fit: contain;
+    margin-right: 10px;
+}

@@ -1,0 +1,136 @@
+//change te bg of nav on scroll
+const cardWrapperStyle = {
+    backgroundColor: 'lightblue',
+    padding: '10px',
+    margin: '10px',
+    width: '200px',
+    height: '200px',
+    boxShadow: '0 2px 3px #ccc',
+    borderRadius: '5px',
+  };
+
+  style={{
+        color: 'red',
+        fontSize: '20px',
+        fontWeight: 'bold',
+        textDecoration: 'underline'
+      }}
+
+      .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+style={cardWrapperStyle}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #08f1ce;
+  columns: #333;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+import React from 'react'
+import './App.css'
+const Card = (props) => {
+  
+  return (
+    <div className='card_wrapper'>
+    <h4>Name - {props.name}</h4>
+    <h4>Age - {props.age}</h4>
+    </div>
+  )
+}
+
+export default function App() {
+  return (
+    <div>
+      <h1>My App</h1>
+      <Card name='John' age='23'/>
+      <Card name='Alex' age='34'/>
+    </div>
+  )
+}
+
+
+const Home = () => {
+  return (
+    <div>Home</div>
+  )
+};
+
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+const [movies,setMovies] = useState([])
+    const getMovies = () => {
+        const response = axios.get('https://api.themoviedb.org/3/movie/top_rated', {
+            params: {
+                api_key: '5a09156795d1d54241b7fb4062a1e800'
+            }
+        } )
+        setMovies(response.data.results)
+    }
+    useEffect(() => {
+        console.log(movies)
+        getMovies()
+    },[])
+  return (
+    <div className='content-wrapper'>
+        Content
+    </div>
+  )
+
+  const URLS = {
+    trending: '/trending/all/day',
+    originals: '/discover/movie?sort_by=popularity.desc',
+    rated: '/movie/top_rated',
+    action: '/discover/movie?with_genre=28',
+    comedy: '/discover/movie?with_genre=35',
+    horror: '/discover/movie?with_genre=27',
+    romance: '/discover/movie?with_genre=10749',
+    documentaries: '/discover/movie?with_genre=99',
+}

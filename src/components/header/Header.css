@@ -1,0 +1,77 @@
+header{
+    height: 100vh;
+    background-image: url('https://media.istockphoto.com/id/1348369671/photo/business-man-using-computer-hand-close-up-futuristic-cyber-space-and-decentralized-finance.jpg?b=1&s=612x612&w=0&k=20&c=E4UpGk2LEkL38nCouJVFecJPYfXZJsDDsl8-nxuVG5Y=');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header_inner_shadow{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(20,20,20,1) 0%, rgb(20,20,20,0) 100%), linear-gradient(180deg, rgb(20,20,20,0.7) 0%, rgb(20,20,20,0) 100%);
+}
+.header_content{
+    margin-left: 5vw;
+    padding-top: 15vh;
+}
+header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header_billboard img{
+    width: 24vw;
+    z-index: 1;
+    position: relative;
+}
+.header_desc{
+    z-index: 2;
+    position: relative;
+    width: 60%;
+    color: white;
+    font-size: 1.8vw;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.header_buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 1.2vw;
+    z-index: 2;
+    position: relative;
+}
+.header_button svg {
+    margin-right: 0.4rem;
+}
+.header_button {
+    border-radius: 4px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.7rem;
+    padding-left: 2rem;
+    padding-right: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.play_button{
+    background-color: #fff;
+    margin-right: 1rem;
+}
+.play_button:hover{
+    background-color: #e6e6e6;
+}
+.more_info_button{
+    background-color: rgba(30,30,30,0.947);
+    color: #fff;
+}
+.more_info_button:hover{
+    background-color: rgba(30,30,30,0.8);
+}
